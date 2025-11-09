@@ -1,0 +1,190 @@
+{
+  "info": {
+    "_postman_id": "finclass-collection-id",
+    "name": "FinClass API - Sprint 1 e 2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Registrar Usuário",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "register"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Usuário Demo\", \"email\": \"demo@finclass.com\", \"senha\": \"123456\"}"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"demo@finclass.com\", \"senha\": \"123456\"}"
+        }
+      }
+    },
+    {
+      "name": "Cadastrar Despesa",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/despesas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "despesas"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"descricao\": \"Almoço\", \"categoria\": \"ALIMENTACAO\", \"valor\": 45.9, \"data\": \"2025-11-01\", \"usuarioId\": 1}"
+        }
+      }
+    },
+    {
+      "name": "Listar Despesas por Usuário",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/despesas/usuario/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "despesas",
+            "usuario",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cadastrar Meta Financeira",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/metas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "metas"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Reserva de Emergência\", \"valorObjetivo\": 1000.0, \"valorAtual\": 200.0, \"prazo\": \"2025-12-31\", \"usuarioId\": 1}"
+        }
+      }
+    },
+    {
+      "name": "Listar Metas por Usuário",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/metas/usuario/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "metas",
+            "usuario",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Resumo Financeiro (HATEOAS)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/relatorios/resumo/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "relatorios",
+            "resumo",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
