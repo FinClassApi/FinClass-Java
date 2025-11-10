@@ -1,23 +1,21 @@
 # FinClass API
 
-API REST desenvolvida em **Java + Spring Boot** para o projeto **FinClass**, parte do Challenge Oracle / disciplina de Java Advanced.
+API REST em **Java + Spring Boot** para o projeto **FinClass** (Challenge Oracle / Java Advanced).
+A aplicação se conecta ao **Oracle** e consome **procedures e table functions** do banco.
 
 A solução expõe endpoints para:
 
-- **Autenticação** (`/api/v1/auth`) – login e cadastro de usuários
-- **Despesas** (`/api/v1/despesas`) – cadastro e consulta de despesas
-- **Metas Financeiras** (`/api/v1/metas`) – cadastro e consulta de metas
-- **Relatórios** (`/api/v1/relatorios`) – resumo financeiro consolidando despesas e metas
+- **Despesas** - operações via procedures (`pr_despesa_ins/upd/`)
+- **Metas Financeiras** operações via procedures (`pr_meta_ins/upd/del`)
+- **Relatórios** - consultas via table functions (`fn_relatorio_despesas, fn_relatorio_metas`)
 
 ---
 
 ## Integrantes do grupo
 
-> Preencha com os dados reais da equipe
-
-- Nome Completo 1 – RM XXXXX – Responsável por \<atividade\>
-- Nome Completo 2 – RM XXXXX – Responsável por \<atividade\>
-- Nome Completo 3 – RM XXXXX – Responsável por \<atividade\>
+- JUAN PABLO REBELO COELHO – RM6560657
+- MARIA EDUARDA FERNANDES ROCHA – RM560657
+- VICTOR DE CARVALHO ALVES – RM560395
 
 ---
 
@@ -27,6 +25,8 @@ Pré-requisitos:
 
 - Java 17
 - Maven 3.x
+- Acesso ao Oracle (FIAP): oracle.fiap.com.br:1521:ORCL
+- Scripts SQL da Sprint (pasta /sql) já executados no banco
 
 Passos:
 

@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class FinclassApiApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(FinclassApiApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(FinclassApiApplication.class, args);
+  }
 }
